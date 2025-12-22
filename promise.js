@@ -32,30 +32,30 @@
 //     console.log(orderId);
 //   });
 
-// isHalwaThere=false;
-// function waitInQueue(){
-//     return new Promise ((resolve,reject)=>{
-//         setTimeout(()=>{
-//             if(isHalwaThere){
-//                 resolve("Buy 1 Kg of Halwa")
-//             }
-//             else{
-//                 reject("HAlwa Finsih")
-//             }
-//         },1000);
-//     });
-// }
+isHalwaThere=false;
+function waitInQueue(){
+    return new Promise ((resolve,reject)=>{
+        setTimeout(()=>{
+            if(isHalwaThere){
+                resolve("Buy 1 Kg of Halwa")
+            }
+            else{
+                reject("HAlwa Finsih")
+            }
+        },1000);
+    });
+}
 
-// function buyHalwa(){
-//     waitInQueue().then((message)=>{
-//         console.log("Go Home");
-//     })
-//     .catch((error)=>{
-//         console.log("error");
-//     })
-//     .finally(()=>{
-//         console.log("Go to Home");
-//     })
-// }
+function buyHalwa(){
+    waitInQueue().then((message)=>{
+        console.log("Go Home");
+    })
+    .catch((error)=>{
+        console.log("error");
+    })
+    .finally(()=>{
+        console.log("Go to Home");
+    })
+}
 
-// buyHalwa();
+buyHalwa();
