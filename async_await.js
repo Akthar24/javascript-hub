@@ -25,3 +25,29 @@
 // placeOrder(cart)
 
 
+function waitInQueue(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            if(isHalwaThere=false){
+                resolve("Buy 1/2 KG of Halwa");
+            }
+            else{
+                reject("Halwa Finish");
+            }
+        },1000);
+    });
+}
+async function buyHalwa(){
+    try{
+        let result = await waitInQueue();
+        console.log(result);
+    }
+    catch(error){
+        console.log("Halwa Over");
+    }
+}
+buyHalwa();
+
+
+
+
