@@ -1,0 +1,490 @@
+try {
+
+    // STEP 1: Read inputs
+    const doctorInput = {
+  "doctorname": "dr. rajesh k. singh",
+  "specialization": "cardiology & interventional medicine",
+  "departmentid": 18,
+  "phonenumber": "919876543210",
+  "yearsofexperience": 18,
+  "availabilitystatus": "available"
+}
+    const deptInput = {
+  "status": "SUCCESS",
+  "records": [
+    {
+      "contactnumber": "918123456789",
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772609303480,
+      "departmentid": "10",
+      "departmentname": "cardiology department",
+      "description": "heart health",
+      "display_name": "10",
+      "floornumber": 4,
+      "guid": "8RFGGkurPaLPNli",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772609303480,
+      "pfm_28361_id": 10,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "e0e37b1c4d9a4f218c5b6a7d9e2f01a3",
+      "rev": "1-84aee55cc966473e566486196f72ef2d"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772615229689,
+      "departmentid": "12",
+      "departmentname": "cardiology department",
+      "description": "healthy body",
+      "display_name": "12",
+      "floornumber": 7,
+      "guid": "l36TcJZgSKmjYh5",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772615229689,
+      "pfm_28361_id": 12,
+      "mobilenumber": 7812879842,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d",
+      "rev": "1-079839c2d3819eca5996af53a28ab7a7"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772616578015,
+      "departmentid": "14",
+      "departmentname": "cardiology department",
+      "description": "heart health",
+      "display_name": "14",
+      "floornumber": 4,
+      "guid": "Nu3LlxgXTkLdlvu",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772616578015,
+      "pfm_28361_id": 14,
+      "mobilenumber": 8123456789,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "e6f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3",
+      "rev": "1-1eee000c396341fd6f7c82ebc1f0925d"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772710402870,
+      "departmentid": "18",
+      "departmentname": "cardiology (gen. med.)",
+      "description": "cardiology, outpatient clinics",
+      "display_name": "18",
+      "floornumber": 2,
+      "guid": "1c180csdss2vsqt",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772710402870,
+      "pfm_28361_id": 18,
+      "mobilenumber": 9876543210,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "e6a7c3b9d0f14a58b2c4e9d6f8a01b3c",
+      "rev": "1-72cb173ac86334164579430f0c6621b9"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772532185156,
+      "departmentid": "3",
+      "departmentname": "Reporting Dept",
+      "description": null,
+      "display_name": "3",
+      "floornumber": null,
+      "guid": "MHz2NFbsbEF0zhl",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772532185156,
+      "pfm_28361_id": 3,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "0019cb326b68be247154fa4020f7c9b5",
+      "rev": "1-afcc884bc66917595baf922d15a9f172"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772701353633,
+      "departmentid": "16",
+      "departmentname": "cardiology department",
+      "description": "healthy body",
+      "display_name": "16",
+      "floornumber": 7,
+      "guid": "iiRJ6ZZ1QVvKJGF",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772701353633,
+      "pfm_28361_id": 16,
+      "mobilenumber": 7812879842,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "2d8f9c1e7a0b4e5f8c6d3a9b1e7f0c4d",
+      "rev": "1-f10d6783014ea82fe10195a6ce3e360b"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772706976537,
+      "departmentid": "17",
+      "departmentname": "cardiology department",
+      "description": "healthy body",
+      "display_name": "17",
+      "floornumber": 7,
+      "guid": "e172i21z4ocsbOP",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772706976537,
+      "pfm_28361_id": 17,
+      "mobilenumber": 7812879842,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "e4b6c1a8d0f74e9b8c2a1d5f7e0b9c3a",
+      "rev": "1-8249246e33f57bfeebe0ee50d8785e88"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 95465,
+      "createdon": 1773051178564,
+      "departmentid": "19",
+      "departmentname": null,
+      "description": null,
+      "display_name": "19",
+      "floornumber": null,
+      "guid": "nkpLUdt9BtUOEFj",
+      "lastmodifiedby": 95465,
+      "lastmodifiedon": 1773051178564,
+      "mobilenumber": null,
+      "pfm_28361_id": 19,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": 133,
+      "id": "f60174c4b0360c2516b25bbc42d481df",
+      "rev": "1-cada8ba4256e4bfe9693ac04060b1cdd"
+    },
+    {
+      "contactnumber": "{\"numType\":1,\"internationalFormat\":\"+91 78128 79842\",\"countryCode\":91,\"plainNumber\":7812879842,\"countryName\":\"IN\"}",
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 95465,
+      "createdon": 1772432820620,
+      "departmentid": "1",
+      "departmentname": "Scan department",
+      "description": "To get the Scan Details",
+      "display_name": "1",
+      "floornumber": 3,
+      "guid": "KJdvrWVGcrsa9nK",
+      "lastmodifiedby": 95465,
+      "lastmodifiedon": 1772432820620,
+      "pfm_28361_id": 1,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": 133,
+      "id": "66438f0e0b0c244d903d3fcf04037f76",
+      "rev": "1-bbdd2884730c3e0ea1587b9598b8e907"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772532580316,
+      "departmentid": "4",
+      "departmentname": "Reporting Dept",
+      "description": null,
+      "display_name": "4",
+      "floornumber": null,
+      "guid": "7I93bEROtZUsIpG",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772532580316,
+      "pfm_28361_id": 4,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "0019cb32cbb02ef697cd7226008a5135",
+      "rev": "1-0f47e1debd2411904c92e3ea001adf92"
+    },
+    {
+      "contactnumber": 918123456789,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772607520452,
+      "departmentid": "9",
+      "departmentname": "cardiology department",
+      "description": "heart health",
+      "display_name": "9",
+      "floornumber": 4,
+      "guid": "G1NJSm7XsgCAhVR",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772607520452,
+      "pfm_28361_id": 9,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "2d8f9c7e1b5a40c69e3d8f7a2c1b0e9d",
+      "rev": "1-43e871ae9cbfe77d6631da0fcdc89a90"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772615890647,
+      "departmentid": "13",
+      "departmentname": "cardiology department",
+      "description": "heart health",
+      "display_name": "13",
+      "floornumber": 4,
+      "guid": "zPdEmfbqnKm1qL4",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772615890647,
+      "pfm_28361_id": 13,
+      "mobilenumber": 8123456789,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "e4a7b9c1d3f5a7b9c1d3f5a7b9c1d3f5",
+      "rev": "1-63682d8119ea1350fdc54108815d995e"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772618440450,
+      "departmentid": "15",
+      "departmentname": "cardiology department",
+      "description": "heart health",
+      "display_name": "15",
+      "floornumber": 4,
+      "guid": "oMdO2KRNCcHCxWx",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772618440450,
+      "pfm_28361_id": 15,
+      "mobilenumber": 8123456789,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "e4b5a3f1c2d04f9e8a7b6c5d4e3f2a1b",
+      "rev": "1-41c18b277ad9194a5adae4b91d703bab"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 95465,
+      "createdon": 1772444675282,
+      "departmentid": "2",
+      "departmentname": "Reporting Dept",
+      "description": null,
+      "display_name": "2",
+      "floornumber": null,
+      "guid": "HTr4bAApelGGNNw",
+      "lastmodifiedby": 95465,
+      "lastmodifiedon": 1772444675282,
+      "pfm_28361_id": 2,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": 133,
+      "id": "66438f0e0b0c244d903d3fcf040e87f1",
+      "rev": "1-6ee1e3dfcb3795035c5fd3cebf9eb13f"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772532900327,
+      "departmentid": "5",
+      "departmentname": "Reporting Dept",
+      "description": null,
+      "display_name": "5",
+      "floornumber": null,
+      "guid": "pb2EyojX5Q5fRmb",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772532900327,
+      "pfm_28361_id": 5,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "0019cb331a0bca9ca38f585796882669",
+      "rev": "1-57d2b251f1fb5017b2dc98446b65655c"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772539752569,
+      "departmentid": "6",
+      "departmentname": "Reporting Dept",
+      "description": null,
+      "display_name": "6",
+      "floornumber": null,
+      "guid": "IONsWU2PyuxGkTR",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772539752569,
+      "pfm_28361_id": 6,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "0019cb39a2ec302732078323af2dbf57",
+      "rev": "1-e725a09b93b8058fcd0074fc9b29a835"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772598196663,
+      "departmentid": "7",
+      "departmentname": "Reporting Dept",
+      "description": null,
+      "display_name": "7",
+      "floornumber": null,
+      "guid": "wzzlgdPAmuGYhSo",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772598196663,
+      "pfm_28361_id": 7,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "0019cb715f75a68eacf317e7221231b0",
+      "rev": "1-67c06a7022cc8e8313b753db8d4e96f1"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772599447315,
+      "departmentid": "8",
+      "departmentname": "Reporting Dept",
+      "description": null,
+      "display_name": "8",
+      "floornumber": null,
+      "guid": "YHvhg3kav0MVTDC",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772599447315,
+      "pfm_28361_id": 8,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "0019cb7290dbdcfa082bed2e74f6f8de",
+      "rev": "1-6396f40701002cfef8660b46aed7489d"
+    },
+    {
+      "contactnumber": null,
+      "couch_id": null,
+      "couch_rev_id": null,
+      "createdby": 469,
+      "createdon": 1772609885303,
+      "departmentid": "11",
+      "departmentname": "cardiology department",
+      "description": "heart health",
+      "display_name": "11",
+      "floornumber": 4,
+      "guid": "D9RgM0s6asf9FyI",
+      "lastmodifiedby": 469,
+      "lastmodifiedon": 1772609885303,
+      "pfm_28361_id": 11,
+      "mobilenumber": 8123456789,
+      "type": "pfm28361",
+      "sync_flag": "C",
+      "org_id": "133",
+      "id": "e9a0f4c1b2d34e56a7890123456789ab",
+      "rev": "1-de3e1ef845d475a5f79a91f0ca63c191"
+    }
+  ],
+  "bookmark": "g1AAAADjeJzLYWBgYMlgTmEQTM4vTc5ISXIwNDLXMwBCwxygFFMiQ5L9____szKY3ByUme0cgGJJDAzpLXi0JIEV1cN1pfQ_gOjK2IlHVx4LkGRoAFJAjfvBOpW28sPsiyao8wBEJ9TOtKUJEJ2ZgVkATKA8TA",
+  "total_rows": 19
+};
+
+    // STEP 2: Parse safely (same pattern as your friend's code)
+    const doctor = typeof doctorInput === "string" ? JSON.parse(doctorInput) : doctorInput;
+    const dept = typeof deptInput === "string" ? JSON.parse(deptInput) : deptInput;
+
+    const records = dept.records || [];
+
+    const doctorDeptId = String(doctor.departmentid || "");
+
+    let lookupObjectId = null;
+
+    // STEP 3: Find matching department
+    records.forEach(item => {
+
+        if (String(item.departmentid) === doctorDeptId) {
+            lookupObjectId = item.id;
+        }
+
+    });
+
+    // STEP 4: Format phone
+    let phone = doctor.phonenumber ? String(doctor.phonenumber) : null;
+
+    if (phone && phone.length > 10) {
+        phone = phone.slice(-10);
+    }
+
+    // STEP 5: Result
+    const result = {
+        pfm28341: {
+            availabilitystatus: doctor.availabilitystatus || null,
+            couch_id: null,
+            couch_rev_id: null,
+            createdby: null,
+            createdon: null,
+            pfm28361_81621: lookupObjectId,
+            display_name: null,
+            doctorid: null,
+            doctorname: doctor.doctorname || null,
+            guid: null,
+            lastmodifiedby: null,
+            lastmodifiedon: null,
+            pfm_28341_id: null,
+            pfm_28361_81621_id: null,
+            phonenumber: phone,
+            specialization: doctor.specialization || null,
+            yearsofexperience: doctor.yearsofexperience || null
+        }
+    };
+
+    console.log(JSON.stringify(result, null, 2));
+    
+    return JSON.stringify(result, null, 2);
+
+  
+    
+
+} catch (error) {
+
+    console.error(error);
+    return '';
+
+}
+
