@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="username">
+    <button onclick="showValue()">Log Username</button>
+
+    <script>
+        function showValue() {
+            // This now runs ONLY when the button is clicked
+            let value = document.getElementById("username").value;
+            console.log(value);
+        }
+    </script>
+
+</body>
+</html>
